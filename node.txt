@@ -1,0 +1,5 @@
+https://cristijora.github.io/vue-paper-dashboard/#/admin/overview
+https://cristijora.github.io/paper-dashboard-pro/#/admin/overview
+http://demos.creative-tim.com/paper-dashboard-pro/examples/dashboard/overview.html
+http://demos.creative-tim.com/material-dashboard-pro/examples/forms/regular.html
+http://demos.creative-tim.com/material-dashboard/examples/dashboard.html
