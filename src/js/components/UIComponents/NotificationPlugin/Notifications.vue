@@ -1,12 +1,15 @@
-<template>
-  <div class="notifications">
-    <transition-group name="list">
-      <notification v-for="(notification,index) in notifications" :key="notification" :message="notification.message" :icon="notification.icon" :type="notification.type" :vertical-align="notification.verticalAlign" :horizontal-align="notification.horizontalAlign" @on-close="removeNotification(index)">
-  
-      </notification>
-    </transition-group>
-  
-  </div>
+<template lang="pug">
+.notifications
+  transition-group(name='list')
+    notification(v-for='(notification,index) in notifications', 
+                :key='notification', 
+                :message='notification.message', 
+                :icon='notification.icon', 
+                :type='notification.type', 
+                :vertical-align='notification.verticalAlign', 
+                :horizontal-align='notification.horizontalAlign', 
+                @on-close='removeNotification(index)')
+
 </template>
 <script>
   import Notification from './Notification.vue'
@@ -27,7 +30,7 @@
   }
 
 </script>
-<style lang="scss">
+<style>
   .list-item {
     display: inline-block;
     margin-right: 10px;
@@ -40,8 +43,7 @@
   
   .list-enter,
   .list-leave-to
-  /* .list-leave-active for <2.1.8 */
-  
+  /* .list-leave-active for <2.1.8 */  
   {
     opacity: 0;
     transform: translateY(-30px);

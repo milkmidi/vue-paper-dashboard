@@ -13,8 +13,11 @@
     "test": "npm run unit && npm run e2e"
   },
   "dependencies": {
+    "babel-eslint": "^7.2.3",
     "bootstrap": "^3.3.7",
     "chartist": "^0.10.1",
+    "eslint-config-airbnb-base": "^11.3.1",
+    "eslint-import-resolver-webpack": "^0.8.3",
     "pug": "^2.0.0-rc.3",
     "pug-loader": "^2.3.0",
     "v-click-outside": "0.0.8",

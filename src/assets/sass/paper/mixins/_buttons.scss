@@ -3,6 +3,8 @@
   border-color: $btn-color;
   color: $btn-color;
 
+  
+
   &:hover,
   &:focus,
   &:active,
@@ -11,6 +13,7 @@
     background-color: $btn-color;
     color: $fill-font-color;
     border-color: $btn-color;
+    // box-shadow: 0 14px 26px -12px $fill-font-color, 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px $fill-font-color;
     .caret {
       border-top-color: $fill-font-color;
     }

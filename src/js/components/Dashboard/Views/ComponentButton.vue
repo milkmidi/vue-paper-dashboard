@@ -8,7 +8,7 @@
             .col-md-6
               .card-header
                 h4.card-title Colors
-              .card-content
+              .card-body
                 button.btn.btn-default.btn-fill.btn-wd Default
                 button.btn.btn-primary.btn-fill.btn-wd Primary
                 button.btn.btn-info.btn-fill.btn-wd Info
@@ -18,7 +18,7 @@
             .col-md-6
               .card-header
                 h4.card-title Styles
-              .card-content
+              .card-body
                 button.btn.btn-wd Default
                 button.btn.btn-fill.btn-wd Fill
                 button.btn.btn-simple.btn-wd Simple
@@ -26,27 +26,27 @@
             .col-md-6
               .card-header
                 h4.card-title Buttons with Label and Animation
-              .card-content
+              .card-body
                 button.btn.btn-wd.btn-success(type='button')
                   span.btn-label
                     i.fa.fa-check
-                  |                     Success
+                  | Success
                 button.btn.btn-wd.btn-danger(type='button')
                   span.btn-label
                     i.fa.fa-times
-                  |                     Danger
+                  | Danger
                 button.btn.btn-wd.btn-info.btn-fill.btn-rotate(type='button')
                   span.btn-label
                     i.ti-settings
-                  |                     Settings
+                  | Settings
                 button.btn.btn-wd.btn-warning.btn-fill.btn-magnify(type='button')
                   span.btn-label
                     i.ti-search
-                  |                     Search
+                  | Search
                 button.btn.btn-wd.btn-default.btn-fill.btn-move-left(type='button')
                   span.btn-label
                     i.ti-angle-left
-                  |                     Back
+                  | Back
                 button.btn.btn-wd.btn-default.btn-fill.btn-move-right(type='button')
                   | Next
                   span.btn-label
@@ -54,7 +54,7 @@
             .col-md-6
               .card-header
                 h4.card-title Sizes
-              .card-content
+              .card-body
                 button.btn.btn-lg.btn-fill Large
                 button.btn.btn-fill Default
                 button.btn.btn-sm.btn-fill Small
@@ -63,7 +63,7 @@
             .col-md-6
               .card-header
                 h4.card-title Button Group
-              .card-content
+              .card-body
                 .btn-group
                   button.btn.btn-default(type='button') Left
                   button.btn.btn-default(type='button') Middle
@@ -84,44 +84,44 @@
             .col-md-6
               .card-header
                 h4.card-title Pagination
-              .card-content
+              .card-body
                 ul.pagination
-                  li
-                    a(href='#pdp')
+                  li.page-item
+                    a.page-link(href='#pdp')
                       i.fa.fa-angle-double-left(aria-hidden='true')
-                  li.active
-                    a(href='#pdp') 1
-                  li
-                    a(href='#pdp') 2
-                  li
-                    a(href='#pdp') 3
-                  li
-                    a(href='#pdp') 4
-                  li
-                    a(href='#pdp') 5
-                  li
-                    a(href='#pdp')
+                  li.page-item.active
+                    a.page-link(href='#pdp') 1
+                  li.page-item
+                    a.page-link(href='#pdp') 2
+                  li.page-item
+                    a.page-link(href='#pdp') 3
+                  li.page-item
+                    a.page-link(href='#pdp') 4
+                  li.page-item
+                    a.page-link(href='#pdp') 5
+                  li.page-item
+                    a.page-link(href='#pdp')
                       i.fa.fa-angle-double-right(aria-hidden='true')
                 ul.pagination.pagination-info
-                  li
-                    a(href='#pdp')
+                  li.page-item
+                    a.page-link(href='#pdp')
                       i.fa.fa-angle-double-left(aria-hidden='true')
-                  li.active
-                    a(href='#pdp') 1
-                  li
-                    a(href='#pdp') 2
-                  li
-                    a(href='#pdp') 3
-                  li
-                    a(href='#pdp') 4
-                  li
-                    a(href='#pdp') 5
-                  li
-                    a(href='#pdp')
+                  li.page-item.active
+                    a.page-link(href='#pdp') 1
+                  li.page-item
+                    a.page-link(href='#pdp') 2
+                  li.page-item
+                    a.page-link(href='#pdp') 3
+                  li.page-item
+                    a.page-link(href='#pdp') 4
+                  li.page-item
+                    a.page-link(href='#pdp') 5
+                  li.page-item
+                    a.page-link(href='#pdp')
                       i.fa.fa-angle-double-right(aria-hidden='true')
           .card-header
             h4.card-title Social buttons
-          .card-content
+          .card-body
             .row
               .col-md-12
                 h5 Default

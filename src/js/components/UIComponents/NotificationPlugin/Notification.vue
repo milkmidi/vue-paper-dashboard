@@ -1,17 +1,23 @@
-<template>
-  <div data-notify="container" class="col-xs-11 col-sm-4 alert open" role="alert" :class="[verticalAlign, horizontalAlign, alertType]" :style="customPosition" data-notify-position="top-center">
-    <button type="button" aria-hidden="true" class="close" data-notify="dismiss" style="position: absolute; right: 10px; top: 5px; z-index: 1033;" @click="close">×
-    </button>
-    <div class="row">
-      <span :class="icon" class="col-xs-1 alert-icon"></span>
-      <div :class="hasIcon ? 'col-xs-8' : 'col-xs-12'">
-        <slot name="message">
-          <div v-html="message"></div>
-        </slot>
-      </div>
-    </div>
-  
-  </div>
+<template lang="pug">
+.col-11.col-sm-4.alert.open(
+  data-notify='container', 
+  role='alert', 
+  :class='[verticalAlign, horizontalAlign, alertType]', 
+  :style='customPosition', 
+  data-notify-position='top-center')
+  button.close(
+    type='button', 
+    aria-hidden='true', 
+    data-notify='dismiss', 
+    style='position: absolute; right: 10px; top: 5px; z-index: 1033;', 
+    @click='close')
+    | ×
+  .row
+    span.col-2.alert-icon(:class='icon')
+    div(:class="hasIcon ? 'col-8' : 'col-12'")
+      slot(name='message')
+        div(v-html='message')
+
 </template>
 <script>
   export default {
@@ -33,7 +39,7 @@
       },
       timeout: {
         type: Number,
-        default: 5000
+        default: 105000
       }
     },
     data () {

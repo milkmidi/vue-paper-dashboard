@@ -12,7 +12,6 @@ const NotificationStore = {
 }
 
 var NotificationsPlugin = {
-
   install (Vue) {
     Object.defineProperty(Vue.prototype, '$notifications', {
       get () {

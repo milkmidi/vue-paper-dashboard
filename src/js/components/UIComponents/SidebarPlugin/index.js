@@ -11,7 +11,17 @@ const SidebarStore = {
     {
       name: 'Component-button',
       icon: 'ti-panel',
-      path: '/admin/component-button'
+      path: '/components/buttons'
+    },
+    {
+      name: 'grid-system',
+      icon: 'ti-panel',
+      path: '/components/grid-system'
+    },
+    {
+      name: 'form',
+      icon: 'ti-panel',
+      path: '/components/form'
     },
     {
       name: 'User Profile',
