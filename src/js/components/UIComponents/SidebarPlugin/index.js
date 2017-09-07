@@ -1,4 +1,4 @@
-import Sidebar from './SideBar.vue'
+import Sidebar from './SideBar.vue';
 
 const SidebarStore = {
   showSidebar: false,
@@ -6,77 +6,82 @@ const SidebarStore = {
     {
       name: 'Dashboard',
       icon: 'ti-panel',
-      path: '/admin/overview'
+      path: '/admin/overview',
     },
     {
       name: 'Component-button',
       icon: 'ti-panel',
-      path: '/components/buttons'
+      path: '/components/buttons',
     },
     {
       name: 'grid-system',
       icon: 'ti-panel',
-      path: '/components/grid-system'
+      path: '/components/grid-system',
+    },
+    {
+      name: 'extend-form',
+      icon: 'ti-panel',
+      path: '/components/extend-form',
     },
     {
       name: 'form',
       icon: 'ti-panel',
-      path: '/components/form'
+      path: '/components/form',
     },
     {
       name: 'User Profile',
       icon: 'ti-user',
-      path: '/admin/stats'
+      path: '/admin/stats',
     },
     {
       name: 'Table List',
       icon: 'ti-view-list-alt',
-      path: '/admin/table-list'
+      path: '/admin/table-list',
     },
     {
       name: 'Typography',
       icon: 'ti-text',
-      path: '/admin/typography'
+      path: '/admin/typography',
     },
     {
       name: 'Icons',
       icon: 'ti-pencil-alt2',
-      path: '/admin/icons'
+      path: '/admin/icons',
     },
     {
       name: 'Maps',
       icon: 'ti-map',
-      path: '/admin/maps'
+      path: '/admin/maps',
     },
     {
       name: 'Notifications',
       icon: 'ti-bell',
-      path: '/admin/notifications'
-    }
+      path: '/admin/notifications',
+    },
   ],
-  displaySidebar (value) {
-    this.showSidebar = value
-  }
-}
+  displaySidebar(value) {
+    this.showSidebar = value;
+  },
+};
 
 const SidebarPlugin = {
 
-  install (Vue) {
+  install(Vue) {
     Vue.mixin({
-      data () {
+      data() {
         return {
-          sidebarStore: SidebarStore
-        }
-      }
-    })
+          sidebarStore: SidebarStore,
+        };
+      },
+    });
 
     Object.defineProperty(Vue.prototype, '$sidebar', {
-      get () {
-        return this.$root.sidebarStore
-      }
-    })
-    Vue.component('side-bar', Sidebar)
-  }
-}
+      get() {
+        return this.$root.sidebarStore;
+      },
+    });
+    Vue.component('side-bar', Sidebar);
+  },
+};
 
-export default SidebarPlugin
+export default SidebarPlugin;

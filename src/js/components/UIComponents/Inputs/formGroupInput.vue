@@ -12,15 +12,15 @@
     props: {
       type: {
         type: String,
-        default: 'text'
+        default: 'text',
       },
       label: String,
       name: String,
       disabled: Boolean,
       placeholder: String,
-      value: [String, Number]
-    }
-  }
+      value: [String, Number],
+    },
+  };
 
 </script>
 <style>

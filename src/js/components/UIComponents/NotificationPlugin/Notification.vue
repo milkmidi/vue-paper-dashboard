@@ -27,62 +27,60 @@
       icon: String,
       verticalAlign: {
         type: String,
-        default: 'top'
+        default: 'top',
       },
       horizontalAlign: {
         type: String,
-        default: 'center'
+        default: 'center',
       },
       type: {
         type: String,
-        default: 'info'
+        default: 'info',
       },
       timeout: {
         type: Number,
-        default: 105000
-      }
+        default: 105000,
+      },
     },
-    data () {
-      return {}
+    data() {
+      return {};
     },
     computed: {
-      hasIcon () {
-        return this.icon && this.icon.length > 0
+      hasIcon() {
+        return this.icon && this.icon.length > 0;
       },
-      alertType () {
-        return `alert-${this.type}`
+      alertType() {
+        return `alert-${this.type}`;
       },
-      customPosition () {
-        let initialMargin = 20
-        let alertHeight = 90
-        let sameAlertsCount = this.$notifications.state.filter((alert) => {
-          return alert.horizontalAlign === this.horizontalAlign && alert.verticalAlign === this.verticalAlign
-        }).length
-        let pixels = (sameAlertsCount - 1) * alertHeight + initialMargin
-        let styles = {}
+      customPosition() {
+        const initialMargin = 20;
+        const alertHeight = 90;
+        const sameAlertsCount = this.$notifications.state.filter(alert => alert.horizontalAlign === this.horizontalAlign && alert.verticalAlign === this.verticalAlign).length;
+        const pixels = (sameAlertsCount - 1) * alertHeight + initialMargin;
+        const styles = {};
         if (this.verticalAlign === 'top') {
-          styles.top = `${pixels}px`
+          styles.top = `${pixels}px`;
         } else {
-          styles.bottom = `${pixels}px`
+          styles.bottom = `${pixels}px`;
         }
-        return styles
-      }
+        return styles;
+      },
     },
     methods: {
-      close () {
-        this.$emit('on-close')
+      close() {
+        this.$emit('on-close');
+      },
+    },
+    mounted() {
+      if (this.timeout) {
+        setTimeout(this.close, this.timeout);
       }
     },
-    mounted () {
-      if (this.timeout) {
-        setTimeout(this.close, this.timeout)
-      }
-    }
-  }
+  };
 
 </script>
 <style lang="scss" scoped>
-  @import "../../../assets/sass/paper/variables";
+  @import "~sass/paper/variables";
   
   .fade-enter-active,
   .fade-leave-active {

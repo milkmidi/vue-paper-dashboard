@@ -6,7 +6,7 @@
         .card-header
           h4.card-title
             | Stacked Form
-        .card-content
+        .card-body
           .form-group
             label Email address
             input.form-control(type='email', placeholder='Enter email')
@@ -23,16 +23,16 @@
         .card-header
           h4.card-title
             | Horizontal Form
-        .card-content
-          .form-group
-            label.col-md-3.control-label Email
+        .card-body
+          .form-group.row
+            label.col-md-3.col-form-label Email
             .col-md-9
               input.form-control(type='email', placeholder='Email')
-          .form-group
-            label.col-md-3.control-label Password
+          .form-group.row
+            label.col-md-3.col-form-label Password
             .col-md-9
               input.form-control(type='password', placeholder='Password')
-          .form-group
+          .form-group.row
             label.col-md-3
             .checkbox.col-md-9
               input#9d9e8d6431958(type='checkbox')
@@ -47,37 +47,37 @@
     .card
       .card-header
         h4.card-title Form Elements
-      .card-content
+      .card-body
         form.form-horizontal(method='get', action='/')
           fieldset
-            .form-group
-              label.col-sm-2.control-label With help
+            .form-group.row
+              label.col-sm-2.col-form-label With help
               .col-sm-10
                 input.form-control(type='text')
                 span.help-block A block of help text that breaks onto a new line.
           fieldset
-            .form-group
-              label.col-sm-2.control-label Password
+            .form-group.row
+              label.col-sm-2.col-form-label Password
               .col-sm-10
                 input.form-control(type='password', name='password')
           fieldset
-            .form-group
-              label.col-sm-2.control-label Placeholder
+            .form-group.row
+              label.col-sm-2.col-form-label Placeholder
               .col-sm-10
                 input.form-control(type='text', placeholder='placeholder')
           fieldset
-            .form-group
-              label.col-sm-2.control-label Disabled
+            .form-group.row
+              label.col-sm-2.col-form-label Disabled
               .col-sm-10
                 input.form-control(type='text', placeholder='Disabled input here...', disabled='disabled')
           fieldset
-            .form-group
-              label.col-sm-2.control-label Static control
+            .form-group.row
+              label.col-sm-2.col-form-label Static control
               .col-sm-10
                 p.form-control-static hello@creative-tim.com
           fieldset
-            .form-group
-              label.col-sm-2.control-label Checkboxes and radios
+            .form-group.row
+              label.col-sm-2.col-form-label Checkboxes and radios
               .col-sm-10
                 .checkbox
                   input#0626e90500656(type='checkbox')
@@ -92,22 +92,25 @@
                   input#dcf1fec33713a(type='radio', value='2')
                   label(for='dcf1fec33713a') Second Radio
           fieldset
-            .form-group
-              label.col-sm-2.control-label Inline checkboxes
+            .form-group.row
+              label.col-sm-2.col-form-label Inline checkboxes
               .col-sm-10
-                .checkbox.checkbox-inline
-                  input#d129c02808421(type='checkbox')
-                  label(for='d129c02808421') a
-                .checkbox.checkbox-inline
-                  input#55606443da2e3(type='checkbox')
-                  label(for='55606443da2e3') b
-                .checkbox.checkbox-inline
-                  input#7170af65cb683(type='checkbox')
-                  label(for='7170af65cb683') c
+                .form-check.form-check-inline
+                  .checkbox.checkbox-inline
+                    input#d129c02808421(type='checkbox')
+                    label(for='d129c02808421') a
+                .form-check.form-check-inline
+                  .checkbox.checkbox-inline
+                    input#55606443da2e3(type='checkbox')
+                    label(for='55606443da2e3') b
+                .form-check.form-check-inline
+                  .checkbox.checkbox-inline
+                    input#7170af65cb683(type='checkbox')
+                    label(for='7170af65cb683') c
           fieldset
             legend Input Variants
-            .form-group
-              label.col-sm-2.control-label Custom Checkboxes & radios
+            .form-group.row
+              label.col-sm-2.col-form-label Custom Checkboxes & radios
               .col-sm-4.col-sm-offset-1
                 .checkbox
                   input#e0e4397f3102a(type='checkbox')
@@ -135,18 +138,18 @@
                   input#2f293ac73b569(type='radio', disabled='disabled', value='2')
                   label(for='2f293ac73b569') Disabled radio is on
           fieldset
-            .form-group.has-success
-              label.col-sm-2.control-label Input with success
+            .form-group.has-success.row
+              label.col-sm-2.col-form-label Input with success
               .col-sm-10
                 input.form-control(type='text', value='Success')
           fieldset
-            .form-group.has-error
-              label.col-sm-2.control-label Input with error
+            .form-group.has-error.row
+              label.col-sm-2.col-form-label Input with error
               .col-sm-10
                 input.form-control(type='text', value='Error')
           fieldset
-            .form-group.column-sizing
-              label.col-sm-2.control-label Column sizing
+            .form-group.column-sizing.row
+              label.col-sm-2.col-form-label Column sizing
               .col-sm-10
                 .row
                   .col-md-3
@@ -156,8 +159,8 @@
                   .col-md-5
                     input.form-control(type='text', placeholder='.col-md-5')
           fieldset
-            .form-group
-              label.col-sm-2.control-label Input groups
+            .form-group.row
+              label.col-sm-2.col-form-label Input groups
               .col-sm-3
                 .input-group
                   span.input-group-addon @
@@ -172,8 +175,8 @@
                   input.form-control(type='text')
                   span.input-group-addon .00
           fieldset
-            .form-group
-              label.col-sm-2.control-label Textarea
+            .form-group.row
+              label.col-sm-2.col-form-label Textarea
               .col-sm-10
                 textarea.form-control(placeholder='Here can be your nice text', rows='3')
   

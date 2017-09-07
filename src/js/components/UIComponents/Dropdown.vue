@@ -1,36 +1,34 @@
-<template>
-  <li class="dropdown" :class="{open:isOpen}" @click="toggleDropDown">
-    <a class="dropdown-toggle btn-rotate" data-toggle="dropdown" >
-      <slot name="title">
-        <i :class="icon"></i>
-        <p class="notification">{{title}}
-          <b class="caret"></b>
-        </p>
-      </slot>
-    </a>
-    <ul class="dropdown-menu">
-      <slot></slot>
-    </ul>
-  </li>
+<template lang="pug">
+li.dropdown(:class='{open:isOpen}', @click='toggleDropDown')
+  a.dropdown-toggle.btn-rotate(data-toggle='dropdown')
+    slot(name='title')
+      i(:class='icon')
+      p.notification
+        | {{title}}
+        b.caret
+  ul.dropdown-menu
+    slot
+
 </template>
 <script>
-  export default{
+  export default {
     props: {
       title: String,
-      icon: String
+      icon: String,
     },
-    data () {
+    data() {
       return {
-        isOpen: false
-      }
+        isOpen: false,
+      };
     },
     methods: {
-      toggleDropDown () {
-        this.isOpen = !this.isOpen
+      toggleDropDown() {
+        this.isOpen = !this.isOpen;
       },
-      closeDropDown () {
-        this.isOpen = false
-      }
-    }
-  }
+      closeDropDown() {
+        console.log(1);
+        this.isOpen = false;
+      },
+    },
+  };
 </script>

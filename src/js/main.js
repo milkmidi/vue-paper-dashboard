@@ -1,7 +1,10 @@
+import 'es6-promise/auto';
+
 import Vue from 'vue';
 import Chartist from 'chartist';
 import VueRouter from 'vue-router';
 import vClickOutside from 'v-click-outside';
+import BootstrapVue from 'bootstrap-vue';
 
 // Plugins
 import GlobalComponents from './gloablComponents';
@@ -12,11 +15,12 @@ import App from './App.vue';
 // router setup
 import routes from './routes';
 
-// library imports
-import 'es6-promise/auto';
-// import 'bootstrap/dist/css/bootstrap.css'
-import './assets/sass/paper-dashboard.scss';
 
+// library imports
+// import 'bootstrap/dist/css/bootstrap.css'
+import '../sass/paper-dashboard.scss';
+
+Vue.use(BootstrapVue);
 // plugin setup
 Vue.use(VueRouter);
 Vue.use(GlobalComponents);

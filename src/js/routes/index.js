@@ -13,6 +13,7 @@ import TableList from '@/components/Dashboard/Views/TableList.vue';
 import ComponentButton from '@/components/Dashboard/Views/ComponentButton.vue';
 import GridSystem from '@/components/Dashboard/Views/GridSystem.vue';
 import Form from '@/components/Dashboard/Views/Form.vue';
+import ExtendForm from '@/components/Dashboard/Views/ExtendForm.vue';
 
 import DashboardLayout from '@/components/Dashboard/Layout/DashboardLayout.vue';
 
@@ -42,6 +43,12 @@ const routes = [
         name: 'form',
         component: Form,
       },
+      {
+        path: 'extend-form',
+        name: 'extend-form',
+        component: ExtendForm,
+      },
+
     ],
   },
   {

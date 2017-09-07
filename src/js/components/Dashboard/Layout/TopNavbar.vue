@@ -10,6 +10,7 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-light top-nav-bar-root">
 
+    <div class="navbar-minimize"><button class="btn btn-fill btn-icon"><i class="ti-more-alt"></i></button></div>
     <a class="navbar-brand">{{routeName}}</a>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -29,13 +30,13 @@
               <p>Stats</p>
             </a>
           </li>
-             <drop-down title="5 Notifications" icon="ti-bell">
-               <li><a href="#">Notification 1</a></li>
-               <li><a href="#">Notification 2</a></li>
-               <li><a href="#">Notification 3</a></li>
-               <li><a href="#">Notification 4</a></li>
-               <li><a href="#">Another notification</a></li>
-             </drop-down>
+            <drop-down title="5 Notifications" icon="ti-bell">
+              <a class="dropdown-item" href="#">Notification 1</a>
+              <a class="dropdown-item" href="#">Notification 2</a>
+              <a class="dropdown-item" href="#">Notification 3</a>
+              <a class="dropdown-item" href="#">Notification 4</a>
+              <a class="dropdown-item" href="#">Another notification</a>
+            </drop-down>  
           <li>
             <a href="#" class="btn-rotate">
               <i class="ti-settings"></i>
@@ -53,36 +54,32 @@
 <script>
   export default {
     computed: {
-      routeName () {
-        const {name} = this.$route
-        return this.capitalizeFirstLetter(name)
-      }
+      routeName() {
+        const { name } = this.$route;
+        return this.capitalizeFirstLetter(name);
+      },
     },
-    data () {
+    data() {
       return {
-        activeNotifications: false
-      }
+        activeNotifications: false,
+      };
     },
     methods: {
-      capitalizeFirstLetter (string) {
-        return string.charAt(0).toUpperCase() + string.slice(1)
+      capitalizeFirstLetter(string) {
+        return string.charAt(0).toUpperCase() + string.slice(1);
       },
-      toggleNotificationDropDown () {
-        this.activeNotifications = !this.activeNotifications
+      toggleNotificationDropDown() {
+        this.activeNotifications = !this.activeNotifications;
       },
-      closeDropDown () {
-        this.activeNotifications = false
+      closeDropDown() {
+        this.activeNotifications = false;
       },
-      toggleSidebar () {
-        this.$sidebar.displaySidebar(!this.$sidebar.showSidebar)
+      toggleSidebar() {
+        this.$sidebar.displaySidebar(!this.$sidebar.showSidebar);
       },
-      hideSidebar () {
-        this.$sidebar.displaySidebar(false)
-      }
-    }
-  }
-
+      hideSidebar() {
+        this.$sidebar.displaySidebar(false);
+      },
+    },
+  };
 </script>
-<style>
-
-</style>
