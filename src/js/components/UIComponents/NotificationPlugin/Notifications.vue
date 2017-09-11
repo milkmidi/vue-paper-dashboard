@@ -12,22 +12,23 @@
 
 </template>
 <script>
-  import Notification from './Notification.vue'
+  import Notification from './Notification.vue';
+
   export default {
     components: {
-      Notification
+      Notification,
     },
-    data () {
+    data() {
       return {
-        notifications: this.$notifications.state
-      }
+        notifications: this.$notifications.state,
+      };
     },
     methods: {
-      removeNotification (index) {
-        this.$notifications.removeNotification(index)
-      }
-    }
-  }
+      removeNotification(index) {
+        this.$notifications.removeNotification(index);
+      },
+    },
+  };
 
 </script>
 <style>

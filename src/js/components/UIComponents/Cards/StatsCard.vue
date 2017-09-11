@@ -19,8 +19,8 @@
 </template>
 <script>
   export default {
-    name: 'stats-card'
-  }
+    name: 'stats-card',
+  };
 
 </script>
 <style>
